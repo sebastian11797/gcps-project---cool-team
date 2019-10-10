@@ -151,14 +151,13 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4420004460711718, guid: a05c7dd77562ab74180c68d3402b6020, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 7.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a05c7dd77562ab74180c68d3402b6020, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &446677016 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1824358903420536, guid: a05c7dd77562ab74180c68d3402b6020,
-    type: 2}
-  m_PrefabInternal: {fileID: 283505391}
 --- !u!4 &446677017 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4420004460711718, guid: a05c7dd77562ab74180c68d3402b6020,
@@ -550,4 +549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePrefabs:
-  - {fileID: 446677016}
+  - {fileID: 1824358903420536, guid: a05c7dd77562ab74180c68d3402b6020, type: 2}
+  - {fileID: 1032169924667838, guid: 3e357bf447b559044a0e35b639efc53a, type: 2}
+  - {fileID: 1569423217380532, guid: e0477f6e7280531409cbaf7af03ff8bc, type: 2}
+  - {fileID: 1181084287031980, guid: 9f02fabd67f6deb43a6db85585254b05, type: 2}
