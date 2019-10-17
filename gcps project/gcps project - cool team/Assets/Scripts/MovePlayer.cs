@@ -47,21 +47,26 @@ public class MovePlayer : MonoBehaviour {
         Vector3 moveVector = Vector3.zero;
         moveVector.x = (targetPosition - transform.position).normalized.x * speed;
 
-        if(controller.isGrounded) {
+        if (controller.isGrounded)
+        {
             verticalVelocity = -0.1f;
-            
-            if(Input.GetKeyDown(KeyCode.Space)) {
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
                 verticalVelocity = jumpForce;
             }
-        else {
-                verticalVelocity -= gravity * Time.deltaTime;
+        }
+        else
+        {
+            verticalVelocity -= gravity * Time.deltaTime;
 
-                // Fast fall
-                if (Input.GetKeyDown(KeyCode.DownArrow)) {
-                    verticalVelocity = -jumpForce;
-                }
+            // Fast fall
+            if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                verticalVelocity = -jumpForce;
             }
         }
+        
 
         moveVector.y = verticalVelocity;
         moveVector.z = speed;
