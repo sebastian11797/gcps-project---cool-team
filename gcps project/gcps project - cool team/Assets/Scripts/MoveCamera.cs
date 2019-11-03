@@ -8,6 +8,12 @@ public class MoveCamera : MonoBehaviour {
     private Vector3 startPosition;
     private Vector3 mVector;
 
+    private float transition = 0.0f;
+    private float animationDuration = 2.0f;
+    private Vector3 animationOffset = new Vector3(0, 5, 5);
+
+    public bool IntroScreen { set; get; }
+
 	// Use this for initialization
 	void Start () {
         lookAt = GameObject.FindGameObjectWithTag("Player").transform;
@@ -23,7 +29,18 @@ public class MoveCamera : MonoBehaviour {
         // Keeps camera centered on X
         mVector.x = 0; 
 
-        transform.position = mVector;
+        if (transition > 1.0f)
+        {
+            transform.position = mVector;
+        }
+        else
+        {
+            transform.position = Vector3.Lerp(mVector + animationOffset, mVector, transition);
+            transition += Time.deltaTime * 1 / animationDuration;
+            //transform.LookAt (lookAt.position + Vector3.up);
+        }
+
+        
         //-----------------------------------
 	}
 }
